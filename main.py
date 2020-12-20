@@ -13,17 +13,22 @@ from datetime import datetime, date
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 
+
+api = FastAPI()
+
+from fastapi.middleware.cors import CORSMiddleware
+
 origins = [
     "http://localhost.tiangolo.com", "https://localhost.tiangolo.com",
     "http://localhost", "http://localhost:8080", "http://127.0.0.1:8080",
     "https://hotel-app-equipo13.herokuapp.com"
 ]
-middleware = [Middleware(
+
+api.add_middleware(
     CORSMiddleware, allow_origins=origins,
     allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
-)]
+)
 
-api = FastAPI(middleware=middleware)
 
 # SECCIÓN RESERVAS # 
 
