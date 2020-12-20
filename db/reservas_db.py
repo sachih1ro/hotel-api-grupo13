@@ -129,9 +129,9 @@ def get_reservas_usuario(email:str):
     reservas = {}
     for i in reversed(database_reservas.values()):
       if i.email == email:
-          count += 1
-          reservas[count] = {
-            'idReserva':i.idReserva,
+          
+          tempdict = {
+          'idReserva':i.idReserva,
             'fechaReserva':i.fechaReserva,
             'fechaLlegada': i.fechaLlegada,
             'fechaSalida': i.fechaSalida,
@@ -141,4 +141,9 @@ def get_reservas_usuario(email:str):
             'ciudad': i.ciudad,
             'direccion': i.direccion
           }
+
+          reservas[count] = tempdict
+          
+          count += 1
+          
     return reservas
