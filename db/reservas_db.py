@@ -112,14 +112,14 @@ def get_reservas_usuario(email:str):
       if i.email == email:
           count += 1
           reservas[count] = {
-            "idReserva":i.idReserva,
-            "fechaReserva":i.fechaReserva,
-            "fechaLlegada": i.fechaLlegada,
-            "fechaSalida": i.fechaSalida,
-            "habitacion": i.habitacion,
-            "numeroPersonas": i.numeroPersonas,
-            "pais": i.pais,
-            "ciudad": i.ciudad,
-            "direccion": i.direccion
+            'idReserva':i.idReserva,
+            'fechaReserva':i.fechaReserva,
+            'fechaLlegada': i.fechaLlegada,
+            'fechaSalida': i.fechaSalida,
+            'habitacion': i.habitacion,
+            'numeroPersonas': i.numeroPersonas,
+            'pais': i.pais,
+            'ciudad': i.ciudad,
+            'direccion': i.direccion
           }
     return reservas
