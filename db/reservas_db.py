@@ -53,7 +53,26 @@ database_reservas = {
     "pais": "Colombia",
     "ciudad": "Aracataca",
     "direccion": "Calle 1 #2-20"
+    }),
+    
+    3 : ReservaInDB(**{"idReserva":3,
+    "fechaReserva":'2021-12-09 21:30:48.620822',
+    "fechaLlegada": '2021-12-10',
+    "fechaSalida": '2021-12-12',
+    "habitacion": "Suite",
+    "numeroPersonas": 5,
+    "nombres": "Juan",
+    "apellidos": "Rulfo Vizcaíno",
+    "email": "juanrulfo@gmail.com",
+    "telefono": 3104632378,
+    "tipoDocumento": "CC",
+    "numeroDocumento": 10227923,
+    "pais": "México",
+    "ciudad": "San Gabriel",
+    "direccion": "Calle 52 #28-20"
     })
+    
+    
 }
 generator = {"id":2} #Auto-Incremental
 
