@@ -86,5 +86,4 @@ async def auth_user(usuarios_in: UsuariosIn):
 
 @api.get("/perfil/reservas/{email}")
 async def reservas_user(email : str):
-    reservas = get_reservas_usuario(email)
-    return reservas
+    return get_reservas_usuario(email)

@@ -125,7 +125,7 @@ def buscar_fecha(reserva_in_db: ReservaInDB):
     return salida
 
 def get_reservas_usuario(email:str):
-    count = 0
+    counter = 1
     reservas = {}
     for i in reversed(database_reservas.values()):
       if i.email == email:
@@ -142,8 +142,8 @@ def get_reservas_usuario(email:str):
             'direccion': i.direccion
           }
 
-          reservas[count] = tempdict
+          reservas["a"+str(counter)] = tempdict
           
-          count += 1
+          counter += 1
           
     return reservas
